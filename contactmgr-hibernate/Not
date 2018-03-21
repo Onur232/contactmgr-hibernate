@@ -1,0 +1,24 @@
+ctrl+shift+c comment out xml'de.
+h2 database pom.xml'e eklendi.
+resources altında hibernate.cfg.xml oluşturuldu. xml harici java ile de konfigüre edilebilir.
+h2 database dosyaları kaydedeceği data klasörü olş.
+
+No appropriate connection provider encountered, assuming application will be supplying connections hatası.
+Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+h2dialect hatası verdi. hibernate.cfg.xml'e hibernate.dialect yazıldı property'ye. önceki hali dialect'ti.
+java.lang.ClassNotFoundException: com.fasterxml.classmate.TypeResolver hatası verdi. 
+pom.xml'e 
+
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.0.8.Final</version>
+</dependency>
+
+yazıldı.
+java.lang.UnsupportedOperationException: The application must supply JDBC connections hatası. tüm property'lerin başına
+hibernate yazıldı.
+<scope>test</scope> idi. <scope>runtime</scope> yapıldı.
+ Unknown entity: com.teamtreehouse.contactmgr.model.Contact hatası.
+ 

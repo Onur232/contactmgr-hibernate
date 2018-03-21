@@ -1,0 +1,27 @@
+<hibernate-configuration>
+	<session-factory>
+	<!-- Database connection setting -->
+	<property name="hibernate.connection.driver_class">org.h2.Driver</property>
+	
+	<!-- data klasörü bizim tarafımızdan oluşturuldu. -->
+	<property name="hibernate.connection.url">jdbc:h2:./data/contactmgr</property>
+	
+	<!-- SQL dialect -->
+	<property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+	
+	<!-- Create the database shema on startup-->
+	<property name="hibernate.hbm2ddl.auto">create</property>
+	
+	<!-- update yapılırsa database en başta uçurulmaz, değişiklikler yazılır.-->
+	<!-- Update the database shema on startup-->
+<!-- 	<property name="hibernate.hbm2ddl.auto">update</property> -->
+	
+	<!-- Show the queries prepared by Hibernate-->
+	<property name="hibernate.show_sql">true</property>
+	
+	<!-- Names the annotated entity classes -->
+	<mapping class="com.teamtreehouse.contactmgr.model.Contact" />
+	</session-factory>
+	
+
+</hibernate-configuration>
